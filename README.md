@@ -1,6 +1,10 @@
-# React Admin Panel
+# React Site
 
-React Admin Panel developed and build with **Node (v18.18.2)**,**React (v17.0.2)**, **TypeScript (v4.4.2)** and **React Router v6**. For Styles, is used **SCSS**.
+React Site developed and build with **Node (v18.18.2)**,**React (v17.0.2)**, **TypeScript (v4.4.2)** and **React Router v6**. For Styles, is used **SCSS**.
+
+# Demo
+
+Visit: [Project React Site demo](https://flourishing-torte-303ff9.netlify.app/)
 
 # Features
 
