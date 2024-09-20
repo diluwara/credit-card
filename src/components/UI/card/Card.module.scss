@@ -1,0 +1,60 @@
+@use "../../../scss/abstracts/" as *;
+
+.card {
+  @include flex(stretch, flex-start, column);
+  background-color: var(--bgc);
+  border-radius: $mediumBorderRadius;
+  box-shadow: $mainBoxShadow;
+  padding: 1rem 2rem;
+  flex: 1;
+  overflow: auto;
+  max-width: 2000px;
+
+  &::-webkit-scrollbar {
+    height: 0.8rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--bgc);
+    margin-block: 0.5rem;
+    border-radius: 100vw;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--primaryColor);
+    border-radius: 100vw;
+  }
+
+  @supports (scrollbar-color: var(--primaryColor) var(--secondaryColor)) {
+    * {
+      scrollbar-color: var(--primaryColor) var(--bgc);
+      scrollbar-width: auto;
+    }
+  }
+
+  .header {
+    flex-shrink: 0;
+    padding-bottom: 1rem;
+    background-color: var(--bgc);
+  }
+
+  .body {
+    flex: 1; // Make the body take available space
+    overflow-x: auto; // Scrollable vertically
+    // Apply padding-left: 12rem for screen widths between 300px and 359px
+    @media (min-width: 300px) and (max-width: 360px) {
+      padding-left: 12rem;
+    }
+  
+    // Apply padding-left: 8rem for screen widths between 360px and 539px
+    @media (min-width: 370px) and (max-width: 490px) {
+      padding-left: 8rem;
+    }
+  }
+
+  .footer {
+    flex-shrink: 0;
+    padding-bottom: 1rem;
+    background-color: var(--bgc);
+  }
+}
